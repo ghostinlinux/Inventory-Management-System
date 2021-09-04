@@ -1,4 +1,0 @@
-{"Transaction Id": 9436157777, "Item sell": {"name": "Laptop Desk", "price": 1000, "quantity": 8, "discount": 15, "gst": 4}, "Quantity of item selled": 2, "Total Billing": 1768.0}
-{"Transaction Id": 9974209055, "Item sell": {"name": "Laptop Desk", "price": 1000, "quantity": 4, "discount": 15, "gst": 4}, "Quantity of item selled": 4, "Total Billing": 3536.0}
-{"Transaction Id": 2500033527, "Item sell": {"name": "Notebook", "price": 120, "quantity": 27, "discount": 10, "gst": 4}, "Quantity of item selled": 3, "Total Billing": 336.96}
-{"Transaction Id": 8128054088, "Item sell": {"name": "Python Book", "price": 400, "quantity": 37, "discount": 20, "gst": 4}, "Quantity of item selled": 3, "Total Billing": 998.4}
