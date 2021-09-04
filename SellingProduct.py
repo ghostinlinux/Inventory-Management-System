@@ -41,11 +41,18 @@ for i in final_rec:
             write_data.close
 
             # selling details
-            with_transaction_id = {'Transaction Id' : random.randint(7777777,9999999999),'Item sell' : final_rec[i], 'Quantity of item selled' : user_quantity , 'Total Billing' : total_bill}
-            selled_item = json.dumps(with_transaction_id)
-            write_selled_data = open("Project/selled data.json", 'a')
-            write_selled_data.write(selled_item + "\n")
-            write_selled_data.close   
+
+            read_data1= open("Project/selled data.json",'r')
+            final_data1 = read_data1.read()
+            read_data1.close
+            final_rec1 = json.loads(final_data1)
+
+            with_transaction_id = {random.randint(7777777,9999999999) : {'Item sell' : final_rec[i], 'Quantity of item selled' : user_quantity , 'Total Billing' : total_bill}}
+            final_rec1.update(with_transaction_id)
+            selled_item = json.dumps(final_rec1)
+            write_selled_data = open("Project/selled data.json", 'w')
+            write_selled_data.write(selled_item)
+            write_selled_data.close
     else:
         if final_rec[i]['quantity']<=user_quantity:
             print(f"We have only {final_rec[i]['quantity']} items")
@@ -53,5 +60,3 @@ for i in final_rec:
         elif user_quantity > 0:
             print("Buy atleast one item")
             break
-
-
